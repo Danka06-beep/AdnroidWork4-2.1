@@ -1,10 +1,12 @@
 package com.example.adnroidwork4_21;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,6 +23,14 @@ public class BankActivity extends AppCompatActivity {
     private CheckBox mMobilePhoneChkBx;
     private CheckBox mCashAddressChkBx;
 
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        switch (item.getItemId()){
+            case (android.R.id.home):
+                finish();
+                break;
+        }
+        return true;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

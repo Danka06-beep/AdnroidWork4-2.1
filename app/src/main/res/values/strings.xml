@@ -38,9 +38,9 @@
     </string-array>
     <string name="button_adress">Показать адрес</string>
     <string name="city">Города</string>
-    <string name="data_start">Дата-время окончания задачи:</string>
+    <string name="data_start">Дата-время старта задачи:</string>
     <string name="ok">OK</string>
-    <string name="data_stop">Дата-время старта задачи:</string>
+    <string name="data_stop">Дата-время окончания задачи:</string>
     <string name="Calendar">Календарь</string>
 
     <string name="list_app">
