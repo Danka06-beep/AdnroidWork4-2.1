@@ -17,16 +17,24 @@ public class NotesActivity extends AppCompatActivity {
     private Button mBtnSaveNote;
     private SharedPreferences myNoteSharedPref;
     private static String NOTE_TEXT = "note_text";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
         initViews();
         getDateFromSharedPref();
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+
 
     private void initViews() {
         mInputNote = findViewById(R.id.inputNote);
@@ -54,4 +62,5 @@ public class NotesActivity extends AppCompatActivity {
         String noteTxt = myNoteSharedPref.getString(NOTE_TEXT, "");
         mInputNote.setText(noteTxt);
     }
+
 }

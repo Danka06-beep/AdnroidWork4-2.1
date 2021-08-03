@@ -3,6 +3,7 @@ package com.example.adnroidwork4_21;
 import android.graphics.drawable.Drawable;
 
 public class ItemData {
+
     private Drawable image;
     private String title;
     private String subtitle;

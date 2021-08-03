@@ -3,6 +3,7 @@ package com.example.adnroidwork4_21;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -30,10 +31,14 @@ public class CalendarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         initViews();
         ButtonStartAndEnd();
         setOnDateChangeListener();
         BtnOK();
+
     }
 
     private void initViews() {
